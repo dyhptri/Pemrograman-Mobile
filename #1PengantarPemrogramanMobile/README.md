@@ -2,11 +2,11 @@
 
 ## Identitas Mahasiswa
 
-| Atribut | Nilai                        |
-| ------- | -----                        |
-| Nama    | Diyah Ramadhani Putri        |
-| NIM     | 244107060152                 |
-| Kelas   | SIB-2E                       |
+| Atribut | Nilai                       |
+| ------- | -----                       |
+| Nama    | Diyah Ramadhani Putri       |
+| NIM     | 244107060152                |
+| Kelas   | SIB-2E                      |
 
 ---
 
@@ -16,6 +16,6 @@
 
 Berikut adalah hasil dari perintah `flutter doctor -v` yang menunjukkan bahwa semua komponen telah terinstal dan terkonfigurasi dengan baik:
 
-![Hasil Flutter Doctor](FlutterDoctor.png)
+![Hasil Flutter Doctor](FlutterDoctor.jpeg)
 
 > **Catatan:** Semua komponen telah terpasang dengan baik dan tidak ada issue yang ditemukan (`No issues found!`).
