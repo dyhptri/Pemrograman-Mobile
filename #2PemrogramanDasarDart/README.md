@@ -78,7 +78,8 @@ Buatlah penjelasan dan contoh eksekusi kode tentang perbedaan Null Safety dan La
 
 **Jawaban:**
 
-Null safety berguna agar nilai dari variabel yang di deklarasikan null safety value nya bisa null
+Null safety berguna agar nilai dari variabel yang di deklarasikan null safety value nya bisa null.
+
 ![Code Null Safety 1](img/nullSafety1.png)
 
 ![Hasil Code Null Safety 1](img/HasilNullSafety1.png)
