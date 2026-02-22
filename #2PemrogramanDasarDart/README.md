@@ -19,7 +19,7 @@ Modifikasilah kode pada baris 3 di VS Code atau Editor Code favorit Anda berikut
 
 **Output:**
 
-![Hasil Code Soal 1](img/HasilCodinganSoal1.)
+![Hasil Code Soal 1](img/HasilCodinganSoal1.png)
 
 ---
 
@@ -80,11 +80,14 @@ Buatlah penjelasan dan contoh eksekusi kode tentang perbedaan Null Safety dan La
 
 Null safety berguna agar nilai dari variabel yang di deklarasikan null safety value nya bisa null
 ![Code Null Safety 1](img/nullSafety1.png)
+
 ![Hasil Code Null Safety 1](img/HasilNullSafety1.png)
 
 ![Code Null Safety 1](img/nullSafety2.png)
+
 ![Hasil Code Null Safety 1](img/HasilNullSafety2.png)
 
 late digunakan ketika kita ingin mendeklarasikan variabel sekarang, tetapi mengisinya nanti sebelum dipakai.
 ![Code Late Variabel](img/lateVariabe.png)
+
 ![Hasil Code Late Variabel](img/HasilLateVariabe.png)
