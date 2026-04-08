@@ -8,8 +8,7 @@
 | NIM     | 244107060152            |
 | Kelas   | SIB-2E                  |
 
-LINK REPOSITORY PRAKTIKUM:
-![https://github.com/dyhptri/flutter-fundamental-part1]
+**Link Repository:** [flutter-fundamental-part1](https://github.com/dyhptri/flutter-fundamental-part1)
 
 ---
 
@@ -544,8 +543,7 @@ Pada praktikum 5 mulai dari Langkah 3 sampai 6, buatlah file widget tersendiri d
 ### Nomor 4
 Selesaikan Codelabs: Your first Flutter app, lalu buatlah laporan praktikumnya dan push ke repository GitHub Anda
 
-Laporan codelab
-![Lihat README Modul TextField](img/ssLangkah1Prak1.png)
+Laporan Codelab: [Your first Flutter app](https://github.com/dyhptri/Pemrograman-Mobile/blob/main/%2305AplikasiPertama%26WidgetDasarFlutter/CODELAB.md)
 
 ### Nomor 5
 README.md berisi: capture hasil akhir tiap praktikum (side-by-side, bisa juga berupa file GIF agar terlihat proses perubahan ketika ada aksi dari pengguna) dengan menampilkan NIM dan Nama Anda sebagai ciri pekerjaan Anda.
