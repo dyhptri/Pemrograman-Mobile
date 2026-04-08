@@ -8,6 +8,8 @@
 | NIM     | 244107060152            |
 | Kelas   | SIB-2E                  |
 
+**Link Repository:** [Flutter-application-1Anda](https://github.com/dyhptri/Flutter-application-1.git)
+
 ## Praktikum Membuat Project Flutter Pertama Anda
 ### Langkah 1: Membuat Project
 Luncurkan Visual Studio Code dan buka palet perintah (dengan F1 atau Ctrl+Shift+P atau Shift+Cmd+P). Ketik "flutter new". Pilih perintah Flutter: New Project.
@@ -21,7 +23,7 @@ Terakhir, beri nama proyek Anda. Beri nama seperti namer_app atau my_awesome_nam
 
 Flutter kini membuat folder proyek Anda dan VS Code membuka folder tersebut.
 
-*Catatan:* VS Code menampilkan jendela modal yang menanyakan untuk mempercayai isi folder tersebut, pilih ya.
+> *Catatan:* VS Code menampilkan jendela modal yang menanyakan untuk mempercayai isi folder tersebut, pilih ya.
 
 ### Langkah 2: Menyalin & Menempelkan Aplikasi Awal
 Pada panel sebelah kiri VS Code, pastikan bahwa Penjelajah dipilih lalu buka file pubspec.yaml.
@@ -31,6 +33,7 @@ Pada panel sebelah kiri VS Code, pastikan bahwa Penjelajah dipilih lalu buka fil
 Ganti konten file ini dengan kode berikut:
 
 **pubspec.yaml**
+
 ```dart
 name: namer_app
 description: A new Flutter project.
@@ -63,7 +66,7 @@ flutter:
 
 File pubspec.yaml menentukan informasi dasar tentang aplikasi Anda, seperti versi aplikasi saat ini, dependensi aplikasi, dan aset yang digunakan oleh aplikasi untuk pengiriman.
 
-*Catatan:* Jika Anda memberi aplikasi nama selain namer_app, Anda perlu mengubah baris pertama sesuai nama yang Anda berikan.
+> *Catatan:* Jika Anda memberi aplikasi nama selain namer_app, Anda perlu mengubah baris pertama sesuai nama yang Anda berikan.
 
 **analysis_options.yaml.**
 
@@ -83,6 +86,7 @@ linter:
 ![analysis_options.yaml](imgCodelab/Langkah5Prak1.png)
 
 **lib/main.dart**
+
 Buka file main.dart pada direktori lib/, lalu ganti isinya dengan kode berikut:
 ```dart
 import 'package:english_words/english_words.dart';
@@ -150,7 +154,7 @@ Selagi lib/main.dart terbuka, temukan tombol "play" di pojok kanan atas jendela 
 
 ![meluncurkan Apk](imgCodelab/Langkah8.png)
 
-*Catatan:* Jika target pengembangan Anda adalah perangkat seluler, kemungkinan sebagian teks terhalang oleh notch atau status bar. Anda akan segera mempelajari cara memperbaiki ini.
+> *Catatan:* Jika target pengembangan Anda adalah perangkat seluler, kemungkinan sebagian teks terhalang oleh notch atau status bar. Anda akan segera mempelajari cara memperbaiki ini.
 
 
 #### Hot Reload Pertama
@@ -261,6 +265,7 @@ Flutter menyediakan pembantu pemfaktoran ulang untuk mengekstrak widget, tetapi 
 Oleh karena itu, tulis ulang widget MyHomePage sebagai berikut:
 
 **lib/main.dart**
+
 ```dart
 // ...
 
@@ -306,6 +311,7 @@ ATAU Pindahkan kursor Anda ke potongan kode yang ingin Anda faktorkan ulang (dal
 ![meluncurkan Apk](imgCodelab/Langkah20.png)
 
 **lib/main.dart**
+
 ```dart
 // ...
 
@@ -343,7 +349,7 @@ Sebagai gantinya, pilih Wrap with Padding. Tindakan ini menciptakan widget induk
 
 Tingkatkan padding dari nilai default 8.0. Misalnya, gunakan 20 untuk padding yang lebih luas.
 
-*Catatan: Flutter menggunakan Komposisi, bukan Pewarisan, kapan pun tersedia. Di sini, padding tidak menjadi atribut dari Text, melainkan sebuah widget! Dengan begitu, widget dapat fokus pada tanggung jawab masing-masing, dan Anda, sebagai developer, memiliki kebebasan penuh mengenai cara menyusun UI. Misalnya, Anda dapat menggunakan widget Padding untuk memberikan padding pada teks, gambar, tombol, widget kustom Anda sendiri, atau keseluruhan aplikasi. Widget tidak peduli dengan apa yang dikemas.*
+> *Catatan:* Flutter menggunakan Komposisi, bukan Pewarisan, kapan pun tersedia. Di sini, padding tidak menjadi atribut dari Text, melainkan sebuah widget! Dengan begitu, widget dapat fokus pada tanggung jawab masing-masing, dan Anda, sebagai developer, memiliki kebebasan penuh mengenai cara menyusun UI. Misalnya, Anda dapat menggunakan widget Padding untuk memberikan padding pada teks, gambar, tombol, widget kustom Anda sendiri, atau keseluruhan aplikasi. Widget tidak peduli dengan apa yang dikemas.
 
 Berikutnya, mari kita naik satu tingkat lebih tinggi. Tempatkan kursor Anda pada widget Padding, buka menu Refactor, lalu pilih Wrap with widget....
 
@@ -369,6 +375,7 @@ Untuk membuat kartu menjadi lebih menarik, beri warna yang lebih kaya pada kartu
 Buat perubahan berikut untuk metode build() BigCard.
 
 **lib/main.dart**
+
 ```dart
 // ...
 
@@ -414,6 +421,7 @@ Tombol timbul di bawah kartu juga berubah warna. Itulah kelebihan dalam mengguna
 Kartu tersebut masih memiliki masalah: ukuran teks terlalu kecil dan warnanya membuat teks sulit dibaca. Untuk memperbaiki masalah ini, buat perubahan berikut pada metode build() BigCard.
 
 **lib/main.dart**
+
 ```dart
 // ...
 
@@ -466,6 +474,7 @@ Solusi sederhananya adalah dengan mengganti pair.asLowerCase dengan "${pair.firs
 Namun, Anda mungkin ingin mempertahankan kesederhanaan visual pair.asLowerCase. Gunakan properti semanticsLabel Text untuk mengganti konten visual widget teks dengan konten semantik yang lebih sesuai untuk pembaca layar:
 
 **lib/main.dart**
+
 ```dart
 // ...
 
@@ -506,6 +515,7 @@ Setelah pasangan kata acak dihadirkan dengan gaya visual yang cukup, saatnya men
 Pertama, ingatlah bahwa BigCard adalah bagian dari Column. Secara default, kolom menggabungkan turunan kolom di bagian atas, tetapi kita dapat mengganti ini dengan mudah. Buka metode build() MyHomePage, dan buat perubahan berikut:
 
 **lib/main.dart**
+
 ```dart
 // ...
 
@@ -561,6 +571,7 @@ Jika mau, Anda dapat menyesuaikan tampilan ini lebih lanjut.
 Dengan perubahan opsional, MyHomePage mencakup kode berikut:
 
 **lib/main.dart**
+
 ```dart
 // ...
 
@@ -606,6 +617,7 @@ Pada bagian berikutnya, Anda akan menambahkan kemampuan untuk memfavoritkan (ata
 Scroll ke MyAppState dan tambahkan kode berikut:
 
 **lib/main.dart**
+
 ```dart
 // ...
 
@@ -639,7 +651,7 @@ Periksa perubahannya:
   * Anda menambahkan properti baru pada MyAppState yang bernama favorites. Properti ini diinisialisasi dengan daftar kosong: [].
   * Anda juga menentukan bahwa daftar tersebut hanya dapat berisi pasangan kata: <WordPair>[], menggunakan generik. Hal ini membantu membuat aplikasi Anda menjadi lebih lengkap—Dart bahkan menolak menjalankan aplikasi jika Anda mencoba menambahkan apa pun selain WordPair. Oleh karena itu, Anda dapat menggunakan daftar favorites karena tidak boleh ada objek yang tidak diinginkan (seperti null) yang bersembunyi di dalamnya.
 
-*Catatan:* Dart memiliki jenis koleksi selain List (ditunjukkan dengan []). Anda dapat berpendapat bahwa Set (ditunjukkan dengan {}) akan lebih masuk akal untuk koleksi favorit. Untuk membuat codelab ini sesederhana mungkin, kita hanya menggunakan satu daftar. Namun, jika mau, Anda dapat menggunakan Set sebagai gantinya. Kode ini tidak akan mengubah banyak.
+> *Catatan:* Dart memiliki jenis koleksi selain List (ditunjukkan dengan []). Anda dapat berpendapat bahwa Set (ditunjukkan dengan {}) akan lebih masuk akal untuk koleksi favorit. Untuk membuat codelab ini sesederhana mungkin, kita hanya menggunakan satu daftar. Namun, jika mau, Anda dapat menggunakan Set sebagai gantinya. Kode ini tidak akan mengubah banyak.
 
   * Anda juga menambahkan metode baru, toggleFavorite(), yang menghapus pasangan kata saat ini dari daftar favorit (jika sudah ada), atau menambahkannya (jika belum ada). Dalam kedua kasus tersebut, kode memanggil notifyListeners(); setelahnya.
 
@@ -660,6 +672,7 @@ Saat menyimpan, Anda akan menyadari bahwa Row bertindak mirip dengan Column—se
 Buat perubahan berikut:
 
 **lib/main.dart**
+
 ```dart
 // ...
 
@@ -712,6 +725,7 @@ Tidak apa-apa jika Anda gagal—lagipula, ini pertama kalinya Anda menggunakan F
 Berikut satu cara untuk menambahkan tombol kedua untuk MyHomePage. Kali ini, gunakan konstruktor ElevatedButton.icon() untuk membuat tombol dengan ikon. Di bagian atas metode build, pilih ikon yang sesuai tergantung pada apakah pasangan kata saat ini sudah berada di favorit atau tidak. Selain itu, perhatikan penggunaan SizedBox lagi, untuk menjaga jarak antara kedua tombol.
 
 **lib/main.dart**
+
 ```dart
 // ...
 
@@ -782,6 +796,7 @@ Untuk mencapai inti dari langkah ini secepat mungkin, pisahkan MyHomePage menjad
 Pilih keseluruhan MyHomePage, hapus, dan gantikan dengan kode berikut:
 
 **lib/main.dart**
+
 ```dart
 // ...
 
@@ -919,6 +934,7 @@ IDE membuat class baru untuk Anda, _MyHomePageState. Class ini memperluas State 
 Widget stateful baru hanya perlu melacak satu variabel: selectedIndex. Buat 3 perubahan berikut untuk _MyHomePageState:
 
 **lib/main.dart**
+
 ```dart
 // ...
 
@@ -985,6 +1001,7 @@ Kolom samping navigasi kini merespons interaksi pengguna. Namun, area yang diper
 Tempatkan kode berikut di bagian atas metode build _MyHomePageState, tepat sebelum return Scaffold:
 
 **lib/main.dart**
+
 ```dart
 // ...
 
@@ -1016,6 +1033,7 @@ Kini, setelah page berisi widget yang ingin Anda tampilkan di sebelah kanan, And
 Berikut tampilan _MyHomePageState setelah satu perubahan tersebut:
 
 **lib/main.dart**
+
 ```dart
 // ...
 
@@ -1092,7 +1110,7 @@ Namun, NavigationRail tidak secara otomatis menampilkan label saat ruang tidak c
 
 Misalnya, Anda memutuskan untuk menampilkan label hanya jika lebar MyHomePage setidaknya 600 piksel.
 
-*Catatan:* Flutter bekerja dengan piksel logis sebagai unit panjang. Piksel ini juga terkadang disebut dengan piksel yang tidak tergantung perangkat. Padding dengan lebar 8 piksel secara visual sama terlepas dari apakah aplikasi berjalan pada ponsel tua dengan resolusi rendah atau perangkat 'retina' yang lebih baru. Ada sekitar 38 piksel logis per sentimeter, atau sekitar 96 piksel logis per inci, dari layar fisik.
+> *Catatan:* Flutter bekerja dengan piksel logis sebagai unit panjang. Piksel ini juga terkadang disebut dengan piksel yang tidak tergantung perangkat. Padding dengan lebar 8 piksel secara visual sama terlepas dari apakah aplikasi berjalan pada ponsel tua dengan resolusi rendah atau perangkat 'retina' yang lebih baru. Ada sekitar 38 piksel logis per sentimeter, atau sekitar 96 piksel logis per inci, dari layar fisik.
 
 Dalam hal ini, widget yang digunakan adalah LayoutBuilder. Widget ini memungkinkan Anda mengubah pohon widget tergantung pada seberapa banyak ruang yang tersedia yang dimiliki.
 
@@ -1114,6 +1132,7 @@ Callback builder LayoutBuilder dipanggil setiap kali batasan berubah. Misalnya, 
 Sekarang kode Anda dapat memutuskan untuk menampilkan label dengan membuat kueri constraints saat ini atau tidak. Buat perubahan baris tunggal berikut untuk metode build _MyHomePageState:
 
 **lib/main.dart**
+
 ```dart
 // ...
 
@@ -1207,6 +1226,7 @@ Berikut ini hanyalah salah satu cara untuk menerapkan halaman favorit. Bagaimana
 Berikut class FavoritesPage baru:
 
 **lib/main.dart**
+
 ```dart
 // ...
 
@@ -1253,3 +1273,5 @@ Yang tersisa sekarang adalah mengganti widget Placeholder dengan FavoritesPage. 
 ![Menambahkan halaman baru](imgCodelab/Langkah68.png)
 
 ![Menambahkan halaman baru](imgCodelab/Langkah69.png)
+
+Anda bisa mendapatkan kode terakhir aplikasi ini melalui repo codelab di GitHub.x`
