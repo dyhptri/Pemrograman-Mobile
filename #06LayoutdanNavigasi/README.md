@@ -12,6 +12,8 @@
 
 **Link Repository:** [layout_flutter](https://github.com/dyhptri/-layout_flutter)
 
+**Link Repository:** [basic_layout_flutter](https://github.com/dyhptri/basic_layout_flutter)
+
 ---
 
 ## Tugas Praktikum 6
@@ -364,4 +366,23 @@ HASIL
 
   5. Sesuaikan dan modifikasi tampilan sehingga menjadi aplikasi yang menarik. Selain itu, pecah widget menjadi kode yang lebih kecil. Tambahkan Nama dan NIM di footer aplikasi belanja Anda.
   Selesaikan Praktikum 5: Navigasi dan Rute tersebut. Cobalah modifikasi menggunakan plugin go_router, lalu dokumentasikan dan push ke repository Anda berupa screenshot setiap hasil pekerjaan beserta penjelasannya di file README.md. Kumpulkan link commit repository GitHub Anda kepada dosen yang telah disepakati!
+
+  ![tugas 5](img/tugas2no5.png) 
+
+  ![tugas 5](img/tugas2no5(2).png)
+
+  ![tugas 5](img/hasilTugas5.gif)
+
 6. Selesaikan Praktikum 5: Navigasi dan Rute tersebut. Cobalah modifikasi menggunakan plugin go_router, lalu dokumentasikan dan push ke repository Anda berupa screenshot setiap hasil pekerjaan beserta penjelasannya di file README.md. Kumpulkan link commit repository GitHub Anda kepada dosen yang telah disepakati!
+
+  ![tugas 6](img/tugas2no6.png)
+
+  ![tugas 6](img/tugas2no6(2).png)
+
+  ![tugas 6](img/tugas2no6(3).png)
+
+  ![tugas 6](img/tugas2no6(4).png)
+
+  HASIL
+
+  ![tugas 6](img/hasilTugas6.gif)
