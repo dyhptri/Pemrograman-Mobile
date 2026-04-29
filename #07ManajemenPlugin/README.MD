@@ -31,7 +31,7 @@ Jika berhasil, maka akan tampil nama plugin beserta versinya di file pubspec.yam
 ### Langkah 3: Buat file red_text_widget.dart
 Buat file baru bernama red_text_widget.dart di dalam folder lib lalu isi kode seperti berikut.
 
-![Menambahkan Plugin](img/langkah3(1)Prak.png)
+![Buat file red_text_widget.dart](img/langkah3(1)Prak.png)
 
 ```dart
 import 'package:flutter/material.dart';
@@ -46,12 +46,12 @@ class RedTextWidget extends StatelessWidget {
 }
 ```
 
-![Menambahkan Plugin](img/langkah3(2)Prak.png)
+![Buat file red_text_widget.dart](img/langkah3(2)Prak.png)
 
 ### Langkah 4: Tambah Widget AutoSizeText
 Masih di file red_text_widget.dart, untuk menggunakan plugin auto_size_text, ubahlah kode return Container() menjadi seperti berikut.
 
-![Menambahkan Plugin](img/langkah4(1)Prak.png)
+![Tambah Widget AutoSizeText](img/langkah4(1)Prak.png)
 ```dart
 return AutoSizeText(
       text,
@@ -63,13 +63,11 @@ return AutoSizeText(
 Setelah Anda menambahkan kode di atas, Anda akan mendapatkan info error. Mengapa demikian? Jelaskan dalam laporan praktikum Anda!
 
 *Jawab*
-Implementasi komponen RedTextWidget sebelumnya mengalami kegagalan kompilasi yang disebabkan oleh dua faktor utama, yaitu ketiadaan dependensi eksternal dan variabel yang tidak terdefinisi. Masalah pertama terletak pada penggunaan widget AutoSizeText yang bukan merupakan bagian dari pustaka standar Flutter SDK. Untuk mengatasi hal ini, diperlukan penambahan pustaka auto_size_text pada berkas konfigurasi pubspec.yaml serta pemanggilan pustaka tersebut melalui instruksi import di bagian atas berkas kode agar modul dapat dikenali oleh sistem.  
-
-Selain masalah dependensi, terdapat kesalahan logika pemrograman di mana variabel text dipanggil di dalam metode build, namun variabel tersebut belum dideklarasikan di dalam kelas. Perbaikan dilakukan dengan mendefinisikan variabel text sebagai properti final bertipe String dan menambahkannya ke dalam constructor kelas dengan label required. Perubahan ini memastikan bahwa data teks dikirimkan secara eksplisit saat widget dipanggil, sehingga komponen menjadi lebih dinamis dan dapat digunakan kembali (reusable) untuk berbagai konten teks yang berbeda dengan tetap mempertahankan konsistensi gaya visual berwarna merah dan pembatasan baris yang telah ditentukan.
+Implementasi komponen RedTextWidget sebelumnya gagal dikompilasi karena dua hal, yaitu belum adanya dependensi tambahan dan penggunaan variabel yang belum didefinisikan. Masalah pertama muncul karena widget AutoSizeText bukan bagian dari Flutter SDK bawaan, jadi perlu ditambahkan dulu library auto_size_text di file pubspec.yaml dan di-import di bagian atas kode supaya bisa dikenali. Selain itu, ada juga kesalahan logika karena variabel text dipakai di dalam method build, tapi belum dideklarasikan di dalam kelas. Solusinya adalah dengan menambahkan variabel text sebagai properti final bertipe String dan memasukkannya ke constructor dengan keyword required. Dengan perbaikan ini, teks bisa dikirim langsung saat widget dipanggil, jadi lebih fleksibel dan bisa dipakai ulang untuk berbagai kebutuhan, tapi tetap dengan gaya teks merah dan batas jumlah baris yang sama.
 
 *Perbaikan*
 
-![Menambahkan Plugin](img/langkah4(2)Prak.png)
+![Perbaikan Tambah Widget AutoSizeText](img/langkah4(2)Prak.png)
 
 ### Langkah 5: Buat Variabel text dan parameter di constructor
 Tambahkan variabel text dan parameter di constructor seperti berikut.
