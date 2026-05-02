@@ -124,10 +124,11 @@ Langkah kedua dilakukan untuk menambahkan pustaka eksternal auto_size_text ke da
 Langkah kelima dilakukan untuk mengatasi error yang muncul pada tahap sebelumnya dengan cara menambahkan variabel text bertipe String, sekaligus menjadikannya sebagai parameter wajib (required) pada konstruktor kelas. Variabel ini bersifat final, sehingga memungkinkan RedTextWidget menerima input teks secara dinamis dari widget lain, misalnya dari main.dart. Dengan adanya perbaikan ini, error yang terjadi dapat diselesaikan, dan widget menjadi lebih fleksibel serta dapat digunakan kembali (reusable) untuk menampilkan berbagai jenis teks yang berbeda.
 
 4. Pada langkah 6 terdapat dua widget yang ditambahkan, jelaskan fungsi dan perbedaannya!
-Jelaskan maksud dari tiap parameter yang ada di dalam plugin auto_size_text berdasarkan tautan pada dokumentasi ini !
 
 *Jawab*
 
 Pada langkah keenam, ditambahkan dua widget Container untuk membandingkan secara langsung tampilan teks saat ditempatkan pada ruang yang terbatas. Container pertama berwarna kuning dengan lebar 50 menggunakan RedTextWidget yang sudah memanfaatkan AutoSizeText, sehingga ukuran teks dapat menyesuaikan secara otomatis agar tetap muat di dalam ruang sempit. Sementara itu, container kedua berwarna hijau dengan lebar 100 menggunakan widget Text bawaan Flutter, di mana ukuran teksnya bersifat tetap (statis) dan tidak dapat menyesuaikan secara otomatis. Perbandingan ini bertujuan untuk menunjukkan bahwa penggunaan AutoSizeText lebih efektif dalam mencegah terjadinya teks terpotong (overflow) dibandingkan dengan teks biasa, terutama ketika digunakan pada tampilan dengan keterbatasan ruang.
 
-5. kumpulkan laporan praktikum Anda berupa link repository GitHub kepada dosen!
+5. Jelaskan maksud dari tiap parameter yang ada di dalam plugin auto_size_text berdasarkan tautan pada dokumentasi ini !
+
+6. kumpulkan laporan praktikum Anda berupa link repository GitHub kepada dosen!
