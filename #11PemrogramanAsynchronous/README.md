@@ -565,22 +565,29 @@ Ya, ada perbedaan pada tampilan akhirnya. Kalau di praktikum sebelumnya setelah 
 
 ![Soal 14](img/hasilSoal14.gif)
 
+![Soal 14](img/soal14.png)
+
 
 ## Praktikum 8: Navigation route dengan Future Function
 ### Langkah 1: Buat file baru navigation_first.dart
 Buatlah file baru ini di project lib Anda.
 
-![Buat file baru navigation_first.dart](img/)
+![Buat file baru navigation_first.dart](img/langkah1Prak8.png)
 
 ### Langkah 2: Isi kode navigation_first.dart
 
 ![Isi kode navigation_first.dart](img/kodeLangkah2Prak8.png)
 
-![Isi kode navigation_first.dart](img/)
+![Isi kode navigation_first.dart](img/langkah2Prak8.png)
 
 Soal 15
-Tambahkan nama panggilan Anda pada tiap properti title sebagai identitas pekerjaan Anda.
-Silakan ganti dengan warna tema favorit Anda.
+1. Tambahkan nama panggilan Anda pada tiap properti title sebagai identitas pekerjaan Anda.
+
+![soal 15](img/soal15(1).png)
+
+2. Silakan ganti dengan warna tema favorit Anda.
+
+![soal 15](img/soal15(2).png)
 
 
 ### Langkah 3: Tambah method di class _NavigationFirstState
@@ -594,16 +601,18 @@ Future _navigateAndGetColor(BuildContext context) async {
 }
 ```
 
-![Tambah method di class _NavigationFirstState](img/)
+![Tambah method di class _NavigationFirstState](img/langkah3Prak8.png)
 
 ### Langkah 4: Buat file baru navigation_second.dart
 Buat file baru ini di project lib Anda. Silakan jika ingin mengelompokkan view menjadi satu folder dan sesuaikan impor yang dibutuhkan.
+
+![Buat file baru navigation_second.dart](img/langkah4Prak8.png)
 
 ### Langkah 5: Buat class NavigationSecond dengan StatefulWidget
 
 ![Buat class NavigationSecond dengan StatefulWidget](img/kodeLangkah5Prak8.png)
 
-![Buat class NavigationSecond dengan StatefulWidget](img/)
+![Buat class NavigationSecond dengan StatefulWidget](img/langkah5Prak8.png)
 
 ### Langkah 6: Edit main.dart
 Lakukan edit properti home.
@@ -611,19 +620,28 @@ Lakukan edit properti home.
 home: const NavigationFirst(),
 ```
 
-![Edit main.dart](img/)
+![Edit main.dart](img/langkah6Prak8.png)
 
-Langkah 8: Run
+### Langkah 8: Run
 Lakukan run, jika terjadi error silakan diperbaiki.
 
-![Edit main.dart](img/)
+![Edit main.dart](img/HasilLangkah8Prak8.gif)
 
 Soal 16
 1. Cobalah klik setiap button, apa yang terjadi ? Mengapa demikian ?
+
+*Jawab*
+
+Saat salah satu tombol (Red, Green, atau Blue) di halaman NavigationSecond diklik, halaman tersebut langsung ditutup (kembali ke halaman pertama), dan warna background di NavigationFirst berubah sesuai tombol yang dipilih.
+Hal ini bisa terjadi karena ada mekanisme pengiriman nilai lewat Navigator. Di NavigationSecond, fungsi Navigator.pop(context, color) dipakai buat ngirim data warna ke halaman sebelumnya. Lalu di NavigationFirst, method _navigateAndGetColor pakai await untuk nunggu hasil itu. Setelah nilainya diterima, setState() dipanggil buat update variabel warna, sehingga UI langsung ke-render ulang dengan warna yang baru.
+
 2. Gantilah 3 warna pada langkah 5 dengan warna favorit Anda!
+
+![Soal 16](img/soal16(2).png)
+
 3. Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 16".
 
-
+![Soal 16](img/HasilSoal16(2).gif)
 
 ## Praktikum 9: Memanfaatkan async/await dengan Widget Dialog
 ### Langkah 1: Buat file baru navigation_dialog.dart
