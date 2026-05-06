@@ -217,7 +217,7 @@ Pastikan telah impor package async berikut.
 import 'package:async/async.dart';
 ```
 
-![Buka main.dart](img/)
+![Buka main.dart](img/langkah1Prak3.png)
 
 ### Langkah 2: Tambahkan variabel dan method
 Tambahkan variabel late dan method di class _FuturePageState seperti ini.
@@ -236,25 +236,34 @@ Future calculate() async {
 }
 ```
 
-![Tambahkan variabel dan method](img/)
+![Tambahkan variabel dan method](img/langkah2Prak3.png)
 
 ### Langkah 3: Ganti isi kode onPressed()
 Tambahkan kode berikut pada fungsi onPressed(). Kode sebelumnya bisa Anda comment.
 
 ![Ganti isi kode onPressed()](img/kodeLangkah3Prak3.png)
 
-![Ganti isi kode onPressed()](img/)
+![Ganti isi kode onPressed()](img/langkah3Prak3.png)
 
 ### Langkah 4:
 Terakhir, run atau tekan F5 untuk melihat hasilnya jika memang belum running. Bisa juga lakukan hot restart jika aplikasi sudah running. Maka hasilnya akan seperti gambar berikut ini. Setelah 5 detik, maka angka 42 akan tampil.
 
-![Run](img/)
+![Run](img/HasilPraktikum3(1).gif)
 
 Soal 5
-Jelaskan maksud kode langkah 2 tersebut!
-Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 5".
+1. Jelaskan maksud kode langkah 2 tersebut!
 
-![Run](img/)
+*Jawab*
+
+Di bagian deklarasi variabel, late Completer completer digunakan untuk menyiapkan wadah bernama completer yang nanti akan diisi. Kata late artinya variabel ini belum langsung dikasih nilai saat dibuat, tapi dijamin bakal diisi sebelum dipakai.
+
+Di method getNumber(), fungsi ini dipanggil saat tombol ditekan. Pertama, completer = Completer<int>() membuat objek Completer yang nantinya akan menghasilkan nilai bertipe integer. Lalu calculate() dipanggil untuk mulai proses di background tanpa await, jadi program nggak nunggu prosesnya selesai. Setelah itu, return completer.future langsung mengembalikan “janji” berupa future ke UI, jadi UI bisa lanjut dulu sambil nunggu hasilnya.
+
+Sedangkan di method calculate(), di sinilah proses yang agak lama dijalankan. Ada await Future.delayed(Duration(seconds: 5)) yang mensimulasikan delay 5 detik, misalnya kayak lagi ambil data dari server. Setelah selesai, completer.complete(42) dipanggil untuk ngisi hasil ke dalam Completer. Jadi future yang tadi dikembalikan di getNumber() akhirnya terpenuhi dengan nilai 42, dan UI bisa menampilkan hasilnya tanpa bikin aplikasi nge-freeze.
+
+2. Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 5".
+
+![Run](img/HasilPraktikum3(1).gif)
 
 ### Langkah 5: Ganti method calculate()
 Gantilah isi code method calculate() seperti kode berikut, atau Anda dapat membuat calculate2()
