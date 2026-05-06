@@ -176,27 +176,39 @@ Future<int> returnThreeAsync() async {
 } 
 ```
 
-![Buka file main.dart](img/)
+![Buka file main.dart](img/langkah1Prak2.png)
 
 ### Langkah 2: Tambah method count()
 Lalu tambahkan lagi method ini di bawah ketiga method sebelumnya.
 
 ![Tambah method count()](img/kodeLangkah2Prak2.png)
 
-![Tambah method count()](img/)
+![Tambah method count()](img/langkah2Prak2.png)
 
 ### Langkah 3: Panggil count()
 Lakukan comment kode sebelumnya, ubah isi kode onPressed() menjadi seperti berikut.
 
 ![Panggil count()](img/kodeLangkah3Prak2.png)
 
-![Panggil count()](img/)
+![Panggil count()](img/langkah3Prak2.png)
 
 ### Langkah 4: Run
 Akhirnya, run atau tekan F5 jika aplikasi belum running. Maka Anda akan melihat seperti gambar berikut, hasil angka 6 akan tampil setelah delay 9 detik.
 
-![Run](img/)
+![Run](img/HasilPraktikum2.gif)
 
+Soal 4
+1. Jelaskan maksud kode langkah 1 dan 2 tersebut!
+
+*Jawab*
+
+**Di langkah 1**, bikin tiga method yaitu returnOneAsync(), returnTwoAsync(), dan returnThreeAsync() yang semuanya pakai Future<int> dan async. Artinya, fungsi ini jalan di background dan hasilnya baru dikasih nanti. Di dalamnya ada await Future.delayed(Duration(seconds: 3)) yang cuma simulasi delay 3 detik, seolah-olah lagi nunggu respon dari server. Setelah nunggu, masing-masing fungsi bakal return nilai 1, 2, dan 3.
+
+**Di langkah 2**, ada method count() yang jadi pengatur jalannya. Di sini ketiga fungsi tadi dipanggil secara berurutan pakai await, jadi harus nunggu satu selesai dulu baru lanjut ke berikutnya. Awalnya total = 0, lalu ditambah hasil dari returnOneAsync() jadi 1, lanjut nambah dari returnTwoAsync() jadi 3, dan terakhir dari returnThreeAsync() jadi 6. Karena semuanya nunggu 3 detik satu per satu, total waktunya jadi 9 detik. Setelah semua selesai, setState dipanggil supaya UI di-update dan menampilkan hasil akhirnya yaitu 6.
+
+2. Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 4".
+
+![Run](img/HasilPraktikum2.gif)
 
 ## Praktikum 3: Menggunakan Completer di Future
 ### Langkah 1: Buka main.dart
