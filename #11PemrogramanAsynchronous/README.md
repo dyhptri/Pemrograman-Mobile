@@ -388,18 +388,28 @@ Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan co
 
 ![Run](img/hasilPraktikum5.gif)
 
+![Run](img/soal9.png)
+
 ### Langkah 4: Tambah method handleError()
 Tambahkan kode ini di dalam class _FutureStatePage
 
 ![Tambah method handleError()](img/kodeLangkah4Prak5.png)
 
-![Tambah method handleError()](img/)
+![Tambah method handleError()](img/langkah4Prak5.png)
 
 soal 10
 Panggil method handleError() tersebut di ElevatedButton, lalu run. Apa hasilnya? Jelaskan perbedaan kode langkah 1 dan 4!
 
-![Tambah method handleError()](img/)
+![Soal 10](img/kodesoal10.png)
 
+![Soal 10](img/hasilPraktikum5(2).gif)
+
+*Jawab*
+
+Perbedaan utamanya ada di gaya penulisan saat handle error di proses asynchronous.
+Pendekatan sebelumnya pakai .then, .catchError, dan .whenComplete yang sifatnya callback chaining. Jadi kodenya ditulis berantai dan cukup efektif, tapi kalau sudah panjang biasanya jadi agak susah dibaca karena terlihat “bersarang”.
+
+Sedangkan di langkah 4 pakai async/await dengan try-catch-finally. Pendekatan ini bikin alur kode kelihatan lebih urut kayak kode biasa (synchronous), jadi lebih rapi dan gampang dipahami. try dipakai buat ngejalanin proses, catch buat nangkep error kalau ada masalah, dan finally buat kode yang pasti dijalankan, entah berhasil atau gagal.
 
 ## Praktikum 6: Menggunakan Future dengan StatefulWidget
 ### Langkah 1: install plugin geolocator
@@ -408,7 +418,7 @@ Tambahkan plugin geolocator dengan mengetik perintah berikut di terminal.
 flutter pub add geolocator
 ```
 
-![install plugin geolocator](img/)
+![install plugin geolocator](img/langkah1Prak6.png)
 
 ### Langkah 2: Tambah permission GPS
 Jika Anda menargetkan untuk platform Android, maka tambahkan baris kode berikut di file android/app/src/main/androidmanifest.xml
@@ -417,7 +427,7 @@ Jika Anda menargetkan untuk platform Android, maka tambahkan baris kode berikut 
 <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 ``` 
 
-![Tambah permission GPS](img/)
+![Tambah permission GPS](img/langkah2Prak6.png)
 
 Jika Anda menargetkan untuk platform iOS, maka tambahkan kode ini ke file Info.plist
 
@@ -432,16 +442,18 @@ Tambahkan file baru ini di folder lib project Anda.
 ### Langkah 4: Buat StatefulWidget
 Buat class LocationScreen di dalam file geolocation.dart
 
-![Buat StatefulWidget](img/)
+![Buat StatefulWidget](img/langkah4Prak6.png)
 
 ### Langkah 5: Isi kode geolocation.dart
 
 ![Isi kode geolocation.dart](img/kodeLangkah5Prak6.png)
 
-![Isi kode geolocation.dart](img/)
+![Isi kode geolocation.dart](img/Langkah5Prak6.png)
 
 Soal 11
 Tambahkan nama panggilan Anda pada tiap properti title sebagai identitas pekerjaan Anda
+
+![Soal 11](img/soal11.png)
 
 ### Langkah 6: Edit main.dart
 Panggil screen baru tersebut di file main Anda seperti berikut.
@@ -449,25 +461,36 @@ Panggil screen baru tersebut di file main Anda seperti berikut.
 home: LocationScreen(),
 ```
 
-![Edit main.dart](img/)
+![Edit main.dart](img/langkah6Prak6.png)
 
 ### Langkah 7: Run
 Run project Anda di device atau emulator (bukan browser), maka akan tampil seperti berikut ini.
 
-![Run](img/)
+![Run](img/langkah7Prak7.png)
 
 ### Langkah 8: Tambahkan animasi loading
 Tambahkan widget loading seperti kode berikut. Lalu hot restart, perhatikan perubahannya.
 
 ![Tambahkan animasi loading](img/kodeLangkah8Prak6.png)
 
-![Tambahkan animasi loading](img/)
+![Tambahkan animasi loading](img/langkah8Prak6.png)
 
 Soal 12
 1. Jika Anda tidak melihat animasi loading tampil, kemungkinan itu berjalan sangat cepat. Tambahkan delay pada method getPosition() dengan kode await Future.delayed(const Duration(seconds: 3));
+
+![Soal 12](img/soal12(1).png)
+
+![Soal 12](img/Hasilsoal12.gif)
+
 2. Apakah Anda mendapatkan koordinat GPS ketika run di browser? Mengapa demikian?
+
+*Jawab*
+
+Biasanya koordinat GPS itu tidak langsung muncul, bahkan bisa gagal kalau dijalankan lewat browser di emulator biasa. Karena browser punya aturan keamanan yang cukup ketat buat akses lokasi, dan emulator browser juga sering nggak punya akses langsung ke hardware GPS kayak di HP asli. Selain itu, plugin geolocator memang lebih dioptimalkan buat platform native seperti Android atau iOS, karena dia pakai API khusus dari sistem operasi tersebut.
+
 3. Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 12".
 
+![Soal 12](img/Hasilsoal12.gif)
 
 ## Praktikum 7: Manajemen Future dengan FutureBuilder
 ### Langkah 1: Modifikasi method getPosition()
