@@ -334,6 +334,8 @@ Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan co
 
 ![Run](img/hasilPraktikum4(1).gif)
 
+![Run](img/soal7.png)
+
 ### Langkah 4: Ganti variabel futureGroup
 Anda dapat menggunakan FutureGroup dengan Future.wait seperti kode berikut.
 ```dart
@@ -343,10 +345,18 @@ final futures = Future.wait<int>([
   returnThreeAsync(),
 ]);
 ```
-![Ganti variabel futureGroup](img/)
+![Ganti variabel futureGroup](img/langkah4Prak4.png)
 
 Soal 8
 Jelaskan maksud perbedaan kode langkah 1 dan 4!
+
+*Jawab*
+
+Perbedaan antara langkah 1 dan langkah 4 itu ada di cara menjalankan beberapa Future secara paralel.
+Di langkah 1, pakai FutureGroup dari package eksternal async. Cara ini lebih manual karena harus bikin objek grup dulu, lalu nambahin Future satu per satu pakai .add(), dan ditutup dengan .close() biar prosesnya mulai. Pendekatan ini cocok kalau jumlah Future-nya belum pasti dari awal dan bisa nambah secara dinamis saat program berjalan.
+Sedangkan di langkah 4, pakai Future.wait yang merupakan bawaan Dart. Cara ini lebih simpel dan ringkas karena cukup masukin semua Future ke dalam List sekaligus. Nggak perlu .close() karena langsung diproses. Biasanya ini jadi pilihan utama kalau jumlah Future-nya sudah jelas dari awal.
+
+![Hasil langkah 4](img/hasilPraktikum4(2).gif)
 
 
 ## Praktikum 5: Menangani Respon Error pada Async Code
@@ -355,28 +365,28 @@ Tambahkan method ini ke dalam class _FuturePageState
  
 ![Buka file main.dart](img/kodeLangkah1Prak5.png)
 
-![Buka file main.dart](img/)
+![Buka file main.dart](img/langkah1Prak5.png)
 
 ### Langkah 2: ElevatedButton
 Ganti dengan kode berikut
 
 ![ElevatedButton](img/kodeLangkah2Prak5.png)
 
-![ElevatedButton](img/)
+![ElevatedButton](img/langkah2Prak5.png)
 
 ### Langkah 3: Run
 Lakukan run dan klik tombol GO! maka akan menghasilkan seperti gambar berikut.
 
-![Run](img/)
+![Run](img/langkah3Prak5(2).png)
 
 Pada bagian debug console akan melihat teks Complete seperti berikut.
 
-![Run](img/)
+![Run](img/langkah3Prak5.png)
 
 Soal 9
 Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 9"
 
-![Run](img/)
+![Run](img/hasilPraktikum5.gif)
 
 ### Langkah 4: Tambah method handleError()
 Tambahkan kode ini di dalam class _FutureStatePage
