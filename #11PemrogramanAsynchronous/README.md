@@ -116,6 +116,8 @@ Soal 2
 
 ![Tambah method getData()](img/soal2Prak1(2).png)
 
+![Tambah method getData()](img/soal2Prak1(3).png)
+
 ### Langkah 5: Tambah kode di ElevatedButton
 Tambahkan kode pada onPressed di ElevatedButton seperti berikut.
 ```dart
@@ -139,13 +141,19 @@ setState(() {});
 ```
 Lakukan run aplikasi Flutter Anda. Anda akan melihat tampilan akhir seperti gambar berikut. Jika masih terdapat error, silakan diperbaiki hingga bisa running.
 
-![Tambah kode di ElevatedButton](img)
+![Tambah kode di ElevatedButton](img/langkah5Prak1.png)
 
 Soal 3
-Jelaskan maksud kode langkah 5 tersebut terkait substring dan catchError!
-Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 3".
+1. Jelaskan maksud kode langkah 5 tersebut terkait substring dan catchError!
 
-![Tambah kode di ElevatedButton](img/)
+*Jawab*
+
+substring(0, 450) itu dipakai untuk motong teks dari indeks ke-0 sampai ke-450, jadi hanya mengambil 450 karakter pertama saja. Di konteks aplikasi ini, data dari API Google Books bentuknya JSON dan panjang, jadi jika ditampilkan semua bisa bikin UI berantakan atau overflow. Jadi dipotong agar tampilannya tetap rapi dan enak dilihat.
+Sedangkan catchError dipakai untuk handle error saat proses async, jadi seperti mengambil data dari internet. Proses ini bisa saja gagal, misalnya karena koneksi jelek atau server bermasalah. Jika gagal, catchError akan menangkap error-nya supaya aplikasi tidak crash. Biasanya diberi pesan “An error occurred” lalu UI di-update, jadi user tetap dapet feedback, bukan layar kosong.
+
+2. Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 3".
+
+![Soal 3 No 2](img/hasilPraktikum1.gif)
 
 
 ## Praktikum 2: Menggunakan await/async untuk menghindari callbacks
