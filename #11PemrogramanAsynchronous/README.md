@@ -643,29 +643,64 @@ Hal ini bisa terjadi karena ada mekanisme pengiriman nilai lewat Navigator. Di N
 
 ![Soal 16](img/HasilSoal16(2).gif)
 
+![Soal 16](img/soal16.png)
+
+
 ## Praktikum 9: Memanfaatkan async/await dengan Widget Dialog
 ### Langkah 1: Buat file baru navigation_dialog.dart
 Buat file dart baru di folder lib project Anda.
 
-![Buat file baru navigation_dialog.dart](img/)
+![Buat file baru navigation_dialog.dart](img/langkah1Prak9.png)
 
 ### Langkah 2: Isi kode navigation_dialog.dart
 
 ![Isi kode navigation_dialog.dart](img/kodeLaangkah2Prak9.png)
 
-![Isi kode navigation_dialog.dart](img/)
+![Isi kode navigation_dialog.dart](img/langkah2Prak9.png)
 
 ### Langkah 3: Tambah method async
 
+![Tambah method async](img/kodeLangkah3Prak9.png)
+
+![Tambah method async](img/langkah3Prak9.png)
 
 ### Langkah 4: Panggil method di ElevatedButton
+```dart
+onPressed: () {
+_showColorDialog(context);
+}),
+```
 
+![Panggil method di ElevatedButton](img/langkah4Prak9.png)
 
 ### Langkah 5: Edit main.dart
 Ubah properti home
+```dart
+home: const NavigationDialog(),
+```
 
-
+![Edit main.dart](img/langkah5Prak9.png)
 
 ### Langkah 6: Run
 Coba ganti warna background dengan widget dialog tersebut. Jika terjadi error, silakan diperbaiki. Jika berhasil, akan tampil seperti gambar berikut.
 
+![Run](img/langkah6Prak9.png)
+
+![Run](img/Hasillangkah6Prak9.gif)
+
+Soal 17
+1. Cobalah klik setiap button, apa yang terjadi ? Mengapa demikian ?
+
+*Jawab*
+
+Saat salah satu tombol (Red, Green, atau Blue) di dalam dialog diklik, dialognya langsung tertutup, lalu warna background di halaman NavigationDialogScreen berubah sesuai warna yang dipilih.
+
+Ini terjadi karena tiap tombol memanggil Navigator.pop(context, color) yang ngirim nilai warna ke method pemanggil (_showColorDialog). Di method itu ada await showDialog, jadi program nunggu sampai dialog ditutup dulu. Setelah itu, setState() dijalankan untuk update nilai variabel warna, sehingga UI langsung ke-render ulang dengan warna yang baru.
+
+2. Gantilah 3 warna pada langkah 3 dengan warna favorit Anda!
+
+![soal 17](img/soal17(2).png)
+
+3. Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 17".
+
+![soal 17](img/HasilSoal17.gif)
