@@ -537,6 +537,8 @@ Sedangkan di praktikum sekarang, pakai FutureBuilder yang lebih otomatis. Widget
 
 ![Soal 13](img/hasilSoal13.gif)
 
+![Soal 13](img/soal13.png)
+
 3. Seperti yang Anda lihat, menggunakan FutureBuilder lebih efisien, clean, dan reactive dengan Future bersama UI.
 
 ### Langkah 5: Tambah handling error
@@ -550,11 +552,18 @@ else if (snapshot.connectionState == ConnectionState.done) {
 }
 ```
 
-![Tambah handling error](img/)
+![Tambah handling error](img/langkah5Prak7.png)
 
 Soal 14
 1. Apakah ada perbedaan UI dengan langkah sebelumnya? Mengapa demikian?
+
+*Jawab*
+
+Ya, ada perbedaan pada tampilan akhirnya. Kalau di praktikum sebelumnya setelah loading selesai yang muncul adalah koordinat GPS, di praktikum ini malah muncul teks “Something terrible happened!”. Hal ini karena di method getPosition() ditambahkan throw Exception(), yang sengaja bikin proses gagal dan mengirim status error ke FutureBuilder. Di dalam FutureBuilder, kondisi snapshot.hasError akan mendeteksi error tersebut, jadi UI diarahkan buat nampilin pesan error, bukan data koordinat.
+
 2. Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 14".
+
+![Soal 14](img/hasilSoal14.gif)
 
 
 ## Praktikum 8: Navigation route dengan Future Function
