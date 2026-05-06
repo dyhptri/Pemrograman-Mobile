@@ -265,12 +265,14 @@ Sedangkan di method calculate(), di sinilah proses yang agak lama dijalankan. Ad
 
 ![Run](img/HasilPraktikum3(1).gif)
 
+![Run](img/soal5.png)
+
 ### Langkah 5: Ganti method calculate()
 Gantilah isi code method calculate() seperti kode berikut, atau Anda dapat membuat calculate2()
 
 ![Ganti method calculate()](img/kodeLangkah5Prak3.png)
 
-![Ganti method calculate()](img/)
+![Ganti method calculate()](img/langkah5Prak3.png)
 
 ### Langkah 6: Pindah ke onPressed()
 Ganti menjadi kode seperti berikut.
@@ -284,13 +286,20 @@ getNumber().then((value) {
 });
 ```
 
-![Pindah ke onPressed()](img/)
+![Pindah ke onPressed()](img/langkah6Prak3.png)
 
 Soal 6
-Jelaskan maksud perbedaan kode langkah 2 dengan langkah 5-6 tersebut!
-Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 6".
+1. Jelaskan maksud perbedaan kode langkah 2 dengan langkah 5-6 tersebut!
 
-![Pindah ke onPressed()](img/)
+*Jawab*
+
+Perbedaan antara langkah 2 dengan langkah 5–6 itu ada di penambahan error handling. Di langkah 2, kode masih sederhana karena cuma mengasumsikan semua proses async bakal berhasil. Jadi setelah proses selesai, langsung kirim hasil pakai completer.complete(42) tanpa mikirin kemungkinan gagal.
+Lanjut, mulai langkah 5, method calculate() dibungkus dengan try-catch. Artinya program disuruh “coba dulu”, tapi kalau ada error, error itu tidak membuat aplikasi crash. Sebaliknya, error akan ditangkap di catch dan dikirim lewat completer.completeError().
+Lanjut ke langkah 6, di bagian UI ditambahin .catchError() untuk menangkap error yang dikirim tadi. Jadi terjadi kegagalan, aplikasi tidak blank atau force close, tapi akan menampilkan pesan seperti “An error occurred”. Dengan ini, aplikasi jadi lebih aman dan user tetap dapet feedback yang jelas kalau prosesnya gagal.
+
+2. Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 6".
+
+![Pindah ke onPressed()](img/HasilPraktikum3(2).gif)
 
 
 ## Praktikum 4: Memanggil Future secara paralel
