@@ -492,38 +492,51 @@ Biasanya koordinat GPS itu tidak langsung muncul, bahkan bisa gagal kalau dijala
 
 ![Soal 12](img/Hasilsoal12.gif)
 
+![Soal 12](img/soal12.png
+
 ## Praktikum 7: Manajemen Future dengan FutureBuilder
 ### Langkah 1: Modifikasi method getPosition()
 Buka file geolocation.dart kemudian ganti isi method dengan kode ini.
 
 ![Modifikasi method getPosition()](img/kodeLangkah1Prak7.png)
 
-![Modifikasi method getPosition()](img/)
+![Modifikasi method getPosition()](img/langkah1Prak7.png)
 
 ### Langkah 2: Tambah variabel
 Tambah variabel ini di class _LocationScreenState
 
 ![Tambah variabel](img/kodeLangakh2Prak7.png)
 
-![Tambah variabel](img/)
+![Tambah variabel](img/langkah2Prak7.png)
 
 ### Langkah 3: Tambah initState()
 Tambah method ini dan set variabel position
 
 ![Tambah initState](img/kodeLangkah3Prak7.png)
 
-![Tambah initState](img/)
+![Tambah initState](img/langkah3Prak7.png)
 
 ### Langkah 4: Edit method build()
 Ketik kode berikut dan sesuaikan. Kode lama bisa Anda comment atau hapus.
 
 ![Edit method build](img/kodeLangkag4Prak7.png)
 
-![Edit method build](img/)
+![Edit method build](img/langkah4Prak7.png)
 
 Soal 13
 1. Apakah ada perbedaan UI dengan praktikum sebelumnya? Mengapa demikian?
+
+*Jawab*
+
+Secara tampilan, hasil akhirnya memang mirip karena sama-sama nunjukin animasi loading (CircularProgressIndicator) lalu menampilkan koordinat lokasi. Tapi sebenarnya cara bangun UI-nya beda.
+Di praktikum sebelumnya, update tampilan dilakukan manual pakai variabel string dan setState() setelah data berhasil didapat. Jadi kita yang ngatur kapan UI harus berubah.
+
+Sedangkan di praktikum sekarang, pakai FutureBuilder yang lebih otomatis. Widget ini langsung nge-handle perubahan state dari Future, mulai dari kondisi loading (waiting) sampai selesai (done) lewat snapshot. Jadi nggak perlu lagi ribet panggil setState() secara manual buat update UI, karena semuanya sudah diatur oleh FutureBuilder.
+
 2. Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 13".
+
+![Soal 13](img/hasilSoal13.gif)
+
 3. Seperti yang Anda lihat, menggunakan FutureBuilder lebih efisien, clean, dan reactive dengan Future bersama UI.
 
 ### Langkah 5: Tambah handling error
