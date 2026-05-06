@@ -301,6 +301,8 @@ Lanjut ke langkah 6, di bagian UI ditambahin .catchError() untuk menangkap error
 
 ![Pindah ke onPressed()](img/HasilPraktikum3(2).gif)
 
+![Pindah ke onPressed()](img/soal6.png)
+
 
 ## Praktikum 4: Memanggil Future secara paralel
 Ketika Anda membutuhkan untuk menjalankan banyak Future secara bersamaan, ada sebuah class yang dapat Anda gunakan yaitu: FutureGroup.
@@ -315,14 +317,14 @@ Tambahkan method ini ke dalam class _FuturePageState
 
 ![Buka file main.dart](img/kodeLangkah1PRAK4.png)
 
-![Buka file main.dart](img/)
+![Buka file main.dart](img/langkah1Prak4.png)
 
 ### Langkah 2: Edit onPressed()
 Anda bisa hapus atau comment kode sebelumnya, kemudian panggil method dari langkah 1 tersebut.
 
 ![Edit onPressed()](img/kodeLangkah2Prak4.png)
 
-![Edit onPressed()](img/)
+![Edit onPressed()](img/langkah2Prak4.png)
 
 ### Langkah 3: Run
 Anda akan melihat hasilnya dalam 3 detik berupa angka 6 lebih cepat dibandingkan praktikum sebelumnya menunggu sampai 9 detik.
@@ -330,7 +332,7 @@ Anda akan melihat hasilnya dalam 3 detik berupa angka 6 lebih cepat dibandingkan
 Soal 7
 Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 7".
 
-![Run](img/)
+![Run](img/hasilPraktikum4(1).gif)
 
 ### Langkah 4: Ganti variabel futureGroup
 Anda dapat menggunakan FutureGroup dengan Future.wait seperti kode berikut.
